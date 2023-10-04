@@ -37,13 +37,13 @@ const Navbar = () => {
         <details>
           <summary>Categories</summary>
           <ul className="p-2 z-50">
-            <li><Link href=''>CPU / Processor</Link></li>
-            <li><Link href=''>Motherboard</Link></li>
-            <li><Link href=''>RAM</Link></li>
-            <li><Link href=''>Power Supply Units</Link></li>
-            <li><Link href=''>Storage Device</Link></li>
-            <li><Link href=''>Monitor</Link></li>
-            <li><Link href=''>Others</Link></li>
+            <li><Link href='/categories/cpu'>CPU / Processor</Link></li>
+            <li><Link href='/categories/motherboard'>Motherboard</Link></li>
+            <li><Link href='/categories/ram'>RAM</Link></li>
+            <li><Link href='/categories/power'>Power Supply Units</Link></li>
+            <li><Link href='/categories/storage'>Storage Device</Link></li>
+            <li><Link href='/categories/monitor'>Monitor</Link></li>
+            <li><Link href='/categories/other'>Others</Link></li>
           </ul>
         </details>
       </li>
