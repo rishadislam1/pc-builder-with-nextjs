@@ -20,7 +20,8 @@ async function run(req,res) {
 
     
     if (req.method === "GET") {
-        const components = await pcCollection.find({}).toArray();
+        // const components = await pcCollection.find({}).toArray();
+        const components = await pcCollection.aggregate([{ $sample: { size: 6 } }]).toArray();
         res.send({ message: "success", status: 200, data: components });
       }
   
