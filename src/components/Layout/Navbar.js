@@ -4,7 +4,6 @@ import { useSession, signOut } from "next-auth/react";
 
 const Navbar = () => {
   const { data: session  } = useSession();
-  console.log(session?.user )
     return (
         <div className="navbar bg-base-100">
   <div className="navbar-start">

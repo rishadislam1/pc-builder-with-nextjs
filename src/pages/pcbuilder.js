@@ -1,7 +1,11 @@
 import Link from 'next/link';
 import React from 'react';
+import { useSelector } from 'react-redux';
 
 const pcbuilder = () => {
+    const {pc} = useSelector(state=>state.buildpc);
+    // console.log(pc.Category)
+
     return (
         <div>
             <div className='mt-10 text-center text-3xl font-bold'>Build Your Pc With Us</div>

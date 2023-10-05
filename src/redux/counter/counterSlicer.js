@@ -1,20 +1,20 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
-    pc: {}
+    count: 0
 }
 
 export const buildpcSlice = createSlice({
-  name: 'buildpc',
+  name: 'counter',
   initialState,
   reducers: {
-    setCpu: (state, action)=>{
-        state.pc = action.payload
+    setCpuStatus: (state)=>{
+        state.count = state.count+1;
     }
   },
 })
 
 // Action creators are generated for each case reducer function
-export const { setCpu } = buildpcSlice.actions
+export const { setCpuStatus } = buildpcSlice.actions
 
 export default buildpcSlice.reducer

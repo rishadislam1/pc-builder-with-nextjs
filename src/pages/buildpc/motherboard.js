@@ -20,17 +20,16 @@ const motherboard = ({cpuComponents}) => {
 
 export default motherboard;
 
-export const getStaticProps = async () => {
-    const res = await fetch("http://localhost:3000/api/motherboardApi"); 
-  
+
+  export const getServerSideProps = async () => {
+    const res = await fetch("http://localhost:3000/api/motherboardApi");
     const data = await res.json();
     // console.log(data);
     return {
       props: {
         cpuComponents: data,
-        // allNews: data.data, // when using internal API connected with mongoDB
-      },
-      revalidate: 10,
+      }
     };
   };
+    
   
