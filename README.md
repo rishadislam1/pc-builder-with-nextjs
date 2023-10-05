@@ -20,21 +20,11 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 
 [API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## About My Application:
+This is an application working on building pc. Here in my application you can see different type of components avaiable and a page pc building available for you. You can build your pc as well you can see various kind of products and their price with ratings and review by the users. You can also see the products details in details way if you want.
 
-## Learn More
+## Explaining the features:
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Here first you will see a home page where a welcome banner is avaiable. If you click on get started you will redirect to the build pc page. After this you will see 6 random components avaleable. You can choose any of these or you can see more by refreshing the page more and more. There is a menu or navbar and a footer section where you can see the menus for toggling and the footer for specification of the website. These are shown all the page commonly. By clicking on category you will able to see 7 category and by clicking any of these you will redirect to specific category page where you will able to see specific category products. On the products you will see the summary. By clicking more button you will able to see the products detais, their rating and reviews of the products.
+There is another option on the menu call pc builder. By clicking on the option you will redirect to the pc builder page. There you should select 6 components as you want. After selecting all of these you will able to build your pc. Means your build button will be activated after that. This way you can traverse the whole website. Thanks for reading.
