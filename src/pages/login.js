@@ -1,6 +1,6 @@
 import { signIn } from "next-auth/react";
 
-const login = () => {
+const Login = () => {
     return (
         <div className="flex flex-col justify-center items-center md:mt-20">
             <button   onClick={() =>
@@ -18,4 +18,4 @@ const login = () => {
     );
 };
 
-export default login;
+export default Login;

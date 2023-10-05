@@ -14,14 +14,14 @@ const productDetails = ({ allComponents }) => {
   } = allComponents?.data;
 
   let sum = 0;
-  Reviews.map(review=>{
+  Reviews?.map(review=>{
   
   
-    sum = sum + review.Rating;
+    sum = sum + review?.Rating;
 
   })
 
-  const averageReview = sum/Reviews.length;
+  const averageReview = sum/Reviews?.length;
  
   
   return (

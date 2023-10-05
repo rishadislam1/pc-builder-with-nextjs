@@ -4,7 +4,7 @@ import { useSession } from "next-auth/react";
 import Link from "next/link";
 import { useSelector } from "react-redux";
 import Swal from "sweetalert2";
-const pcbuilder = () => {
+const Pcbuilder = () => {
     let count = 0;
     const { data:cpuComponents } = useGetPcQuery({},{
         refetchOnMountOrArgChange: true,
@@ -226,7 +226,7 @@ const pcbuilder = () => {
   );
 };
 
-export default pcbuilder;
+export default Pcbuilder;
 
 // export const getServerSideProps = async () => {
 //   const res = await fetch("http://localhost:3000/api/getUserPcBuild");

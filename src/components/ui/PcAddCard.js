@@ -1,6 +1,7 @@
 import { useAddPcMutation } from "@/redux/addPc/pcApi";
 import { setCpu } from "@/redux/buildpc/buildpcSlicer";
 import { useSession } from "next-auth/react";
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useDispatch, useSelector } from "react-redux";
@@ -34,7 +35,16 @@ const PcAddCard = ({allComponents}) => {
    }
     return (
         <div className="card w-96 bg-base-100 shadow-xl">
-        <figure><img src={img} alt="Shoes" className="h-[300px] w-full" /></figure>
+        <figure>
+        <Image
+        src={img}
+        width={500}
+        height={200}
+        responsive="true"
+        alt="PC image"
+        className="w-full md:h-[300px]"
+      />
+      </figure>
         <div className="card-body">
           <h2 className="card-title">{ ProductName }</h2>
           <p>Category: {Category}</p>

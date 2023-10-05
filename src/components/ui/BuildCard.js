@@ -1,3 +1,4 @@
+import Image from "next/image";
 
 const BuildCard = ({allComponents}) => {
   
@@ -7,7 +8,16 @@ const BuildCard = ({allComponents}) => {
 
     return (
         <div className="card w-96 bg-base-100 shadow-xl">
-        <figure><img src={img} alt="Shoes" className="h-[300px] w-full" /></figure>
+        <figure>
+        <Image
+        src={img}
+        width={500}
+        height={200}
+        responsive="true"
+        alt="PC image"
+        className="w-full md:h-[300px]"
+      />
+           </figure>
         <div className="card-body">
           <h2 className="card-title">{ ProductName }</h2>
           <p>Category: {Category}</p>
