@@ -51,7 +51,7 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end">
-    <button className="btn btn-primary">Pc Builder</button>
+    <Link href='/pcbuilder'><button className="btn btn-primary">Pc Builder</button></Link>
   </div>
 </div>
     );
