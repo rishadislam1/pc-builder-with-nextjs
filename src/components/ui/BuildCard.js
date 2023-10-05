@@ -3,6 +3,7 @@ const BuildCard = ({allComponents}) => {
   
    const {_id,img, ProductName, Category, Price, Status, Reviews} = allComponents;
 
+   const rat = Reviews.map(rev=> {return rev.Rating})
 
     return (
         <div className="card w-96 bg-base-100 shadow-xl">
@@ -12,7 +13,7 @@ const BuildCard = ({allComponents}) => {
           <p>Category: {Category}</p>
           <p>Price: {Price}</p>
           <p>Status: {Status}</p>
-          {/* <p>Rating: {Reviews[0]?.Rating}</p> */}
+          <p>Rating: {rat}</p>
       
     
         </div>

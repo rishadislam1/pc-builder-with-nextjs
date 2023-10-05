@@ -1,7 +1,19 @@
 import BuildCard from "@/components/ui/BuildCard";
+import { useDeletePcMutation, useGetPcQuery } from "@/redux/addPc/pcApi";
 import { useSession } from "next-auth/react";
 import Link from "next/link";
-const pcbuilder = ({ cpuComponents }) => {
+import { useSelector } from "react-redux";
+import Swal from "sweetalert2";
+const pcbuilder = () => {
+    let count = 0;
+    const { data:cpuComponents } = useGetPcQuery({},{
+        refetchOnMountOrArgChange: true,
+        pollingInterval: 1,
+        refetchOnReconnect: true,
+        refetchOnFocus: true
+        
+      });
+
   let cpu = {};
   let monitor = {};
   let motherboard = {};
@@ -14,13 +26,41 @@ const pcbuilder = ({ cpuComponents }) => {
     if (session?.user?.email === component.userEmail) {
       if (component?.Category === "CPU / Processor") {
         cpu = component;
+        count++;
       }
       if (component?.Category === "Power Supply Unit") {
         power = component;
+        count++;
+      }
+      if (component?.Category === "Motherboard") {
+        motherboard = component;
+        count++;
+      }
+      if (component?.Category === "RAM") {
+        ram = component;
+        count++;
+      }
+      if (component?.Category === "Storage Device") {
+        storage = component;
+        count++;
+      }
+      if (component?.Category === "Monitor") {
+        monitor = component;
+        count++;
       }
     }
   });
 
+  const [deletePc] = useDeletePcMutation();
+
+  const handleBuild = ()=>{
+    Swal.fire(
+        'Good job!',
+        'You build your pc successfully !',
+        'success'
+      )
+    deletePc(session?.user?.email)
+  }
   return (
     <div>
       <div className="mt-10 text-center text-3xl font-bold">
@@ -38,7 +78,7 @@ const pcbuilder = ({ cpuComponents }) => {
             )}
 
             <div>
-              {cpu?._id ? (
+              {cpu?._id? (
                 <button className="btn btn-primary" disabled>
                   Choose
                 </button>
@@ -178,8 +218,9 @@ const pcbuilder = ({ cpuComponents }) => {
           <hr className="border-1 mt-5 border-gray-300 w-full" />
         </div>
       </div>
+      
       <div className="flex justify-center items-center mt-5 mb-10">
-        <button className="btn btn-accent text-center">Build</button>
+      {(count==6)?<button onClick={handleBuild} className="btn btn-accent text-center">Build</button>:<button className="btn btn-accent text-center" disabled>Build</button>}
       </div>
     </div>
   );
@@ -187,13 +228,13 @@ const pcbuilder = ({ cpuComponents }) => {
 
 export default pcbuilder;
 
-export const getServerSideProps = async () => {
-  const res = await fetch("http://localhost:3000/api/getUserPcBuild");
-  const data = await res.json();
+// export const getServerSideProps = async () => {
+//   const res = await fetch("http://localhost:3000/api/getUserPcBuild");
+//   const data = await res.json();
 
-  return {
-    props: {
-      cpuComponents: data,
-    },
-  };
-};
+//   return {
+//     props: {
+//       cpuComponents: data,
+//     },
+//   };
+// };

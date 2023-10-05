@@ -3,6 +3,7 @@ import Head from 'next/head';
 import React from 'react';
 
 const monitor = ({cpuComponents}) => {
+  
     return (
         <div>
       <Head>

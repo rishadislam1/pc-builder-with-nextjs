@@ -13,22 +13,28 @@ const pcApi = api.injectEndpoints({
       }),
       invalidatesTags: ['pc'],
     }),
+
+    getPc: builder.query({
+      query: () => '/getUserPcBuild',
+    }),
   
      
 
     
-    // deleteBook: builder.mutation({
-    //   query: (id)=>({
-    //     url: `/book/${id}`,
-    //     method: 'DELETE',
-    //   }),
-    //   invalidatesTags: ['pc'],
-    // }),
+    deletePc: builder.mutation({
+      query: (email)=>({
+        url: `/deletepc/${email}`,
+        method: 'DELETE',
+      }),
+      invalidatesTags: ['pc'],
+    }),
   }),
 });
 
 export const {
 
 useAddPcMutation,
+useGetPcQuery,
+useDeletePcMutation
 
 } = pcApi;
