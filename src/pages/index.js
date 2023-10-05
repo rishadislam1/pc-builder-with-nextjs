@@ -1,3 +1,4 @@
+import Banner from "@/components/Layout/Banner";
 import PcComponentsCard from "@/components/ui/PcComponentsCard";
 import Head from "next/head";
 
@@ -8,6 +9,9 @@ const HomePage = ({allComponents}) => {
       <Head>
         <title>Pc Builder Home Page</title>
       </Head>
+      <div>
+        <Banner></Banner>
+      </div>
       <div className="mt-24 grid lg:grid-cols-3 grid-cols-1 md:grid-cols-2 md:gap-10">
         {
           allComponents?.data?.map(component=><PcComponentsCard key={component._id} allComponents={component}></PcComponentsCard>)
