@@ -1,3 +1,4 @@
+import Footer from "@/components/Layout/Footer";
 import Navbar from "@/components/Layout/Navbar";
 import { store } from "@/redux/store";
 import "@/styles/globals.css";
@@ -11,6 +12,7 @@ export default function App({ Component, pageProps }) {
         <SessionProvider session={pageProps.session}>
           <Navbar />
           <Component {...pageProps} />
+          <Footer></Footer>
         </SessionProvider>
       </Provider>
       ,
