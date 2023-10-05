@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 const PcComponentsCard = ({allComponents}) => {
-    console.log(allComponents)
+  
    const {_id,img, ProductName, Category, Price, Status, Reviews} = allComponents;
     return (
         <div className="card w-96 bg-base-100 shadow-xl">

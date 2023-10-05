@@ -2,7 +2,7 @@ import PcComponentsCard from "@/components/ui/PcComponentsCard";
 import Head from "next/head";
 
 const HomePage = ({allComponents}) => {
-  console.log(allComponents.data)
+
   return (
     <div>
       <Head>
