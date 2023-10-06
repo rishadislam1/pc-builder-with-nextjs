@@ -26,5 +26,12 @@ This is an application working on building pc. Here in my application you can se
 
 ## Explaining the features:
 
-Here first you will see a home page where a welcome banner is avaiable. If you click on get started you will redirect to the build pc page. After this you will see 6 random components avaleable. You can choose any of these or you can see more by refreshing the page more and more. There is a menu or navbar and a footer section where you can see the menus for toggling and the footer for specification of the website. These are shown all the page commonly. By clicking on category you will able to see 7 category and by clicking any of these you will redirect to specific category page where you will able to see specific category products. On the products you will see the summary. By clicking more button you will able to see the products detais, their rating and reviews of the products.
-There is another option on the menu call pc builder. By clicking on the option you will redirect to the pc builder page. There you should select 6 components as you want. After selecting all of these you will able to build your pc. Means your build button will be activated after that. This way you can traverse the whole website. Thanks for reading.
+* Here first you will see a home page where a welcome banner is available. 
+* If you click on get started you will redirect to the build pc page. After this you will see 6 random components available. You can choose any of these or you can see more by refreshing the page more and more. 
+* There is a menu or navbar and a footer section where you can see the menus for toggling and the footer for specification of the website. These are shown all the page commonly. 
+* By clicking on category you will able to see 7 category and by clicking any of these you will redirect to specific category page where you will able to see specific category products. 
+* On the products you will see the summary. By clicking more button you will able to see the products details, their rating and reviews of the products.
+* There is another option on the menu call pc builder. By clicking on the option you will redirect to the pc builder page. 
+* There you should select 6 components as you want. 
+* After selecting all of these you will able to build your pc. Means your build button will be activated after that. 
+* This way you can traverse the whole website. Thanks for reading.
