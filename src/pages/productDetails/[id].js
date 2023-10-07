@@ -118,7 +118,7 @@ const productDetails = ({ allComponents }) => {
 export default productDetails;
 
 export const getStaticPaths = async () => {
-  const res = await fetch("http://localhost:3000/api/allComponents");
+  const res = await fetch("https://pcbuildserver-git-main-freelancerrishad.vercel.app/allComponents");
   const components = await res.json();
 
   const paths = components?.data?.map((component) => ({
@@ -131,7 +131,7 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async (context) => {
   const { params } = context;
   const res = await fetch(
-    `http://localhost:3000/api/allComponents/${params.id}`
+    `https://pcbuildserver-git-main-freelancerrishad.vercel.app/allComponents/${params.id}`
   );
 
   const data = await res.json();

@@ -26,7 +26,7 @@ export default HomePage;
 
 
 export const getStaticProps = async () => {
-  const res = await fetch("http://localhost:3000/api/pcrandom"); 
+  const res = await fetch("https://pcbuildserver-git-main-freelancerrishad.vercel.app/pcrandom"); 
 
   const data = await res.json();
   // console.log(data);

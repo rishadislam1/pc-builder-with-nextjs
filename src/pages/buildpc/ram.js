@@ -24,7 +24,7 @@ export default ram;
 
 
   export const getServerSideProps = async () => {
-    const res = await fetch("http://localhost:3000/api/ramApi");
+    const res = await fetch("https://pcbuildserver-git-main-freelancerrishad.vercel.app/ramApi");
     const data = await res.json();
     // console.log(data);
     return {

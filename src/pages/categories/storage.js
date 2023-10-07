@@ -21,7 +21,7 @@ const storage = ({cpuComponents}) => {
 export default storage;
 
 export const getStaticProps = async () => {
-    const res = await fetch("http://localhost:3000/api/storageApi"); 
+    const res = await fetch("https://pcbuildserver-git-main-freelancerrishad.vercel.app/storageApi"); 
   
     const data = await res.json();
     // console.log(data);

@@ -21,7 +21,7 @@ const motherboard = ({cpuComponents}) => {
 export default motherboard;
 
 export const getStaticProps = async () => {
-    const res = await fetch("http://localhost:3000/api/motherboardApi"); 
+    const res = await fetch("https://pcbuildserver-git-main-freelancerrishad.vercel.app/motherboardApi"); 
   
     const data = await res.json();
     // console.log(data);
